@@ -40,15 +40,15 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Clean Header Social Links with External Arrows */}
+        {/* Clean Header Social Links with Official Vector SVGs & External Arrows */}
         <div className="flex items-center gap-3 text-xs font-mono">
           <a
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-zinc-600 hover:text-zinc-900 transition-colors"
+            className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
           >
-            <GithubIcon size={13} className="text-zinc-700" />
+            <GithubIcon size={14} className="text-zinc-900" />
             <span>GitHub</span>
             <ArrowUpRightIcon size={11} className="text-zinc-400" />
           </a>
@@ -57,9 +57,9 @@ export function Hero() {
             href={PERSONAL_INFO.x}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-zinc-600 hover:text-zinc-900 transition-colors"
+            className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
           >
-            <TwitterIcon size={13} className="text-zinc-700" />
+            <TwitterIcon size={13} className="text-black" />
             <span>X</span>
             <ArrowUpRightIcon size={11} className="text-zinc-400" />
           </a>
@@ -68,9 +68,9 @@ export function Hero() {
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-zinc-600 hover:text-zinc-900 transition-colors"
+            className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
           >
-            <LinkedinIcon size={13} className="text-[#0a66c2]" />
+            <LinkedinIcon size={14} className="text-[#0a66c2]" />
             <span>LinkedIn</span>
             <ArrowUpRightIcon size={11} className="text-zinc-400" />
           </a>

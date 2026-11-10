@@ -27,18 +27,21 @@ export function Contact() {
       href: PERSONAL_INFO.github,
       icon: GithubIcon,
       handle: "@Subhodip-Mishra",
+      colorClass: "text-zinc-900",
     },
     {
       name: "X (Twitter)",
       href: PERSONAL_INFO.x,
       icon: TwitterIcon,
       handle: "@SuvodeepMishra",
+      colorClass: "text-black",
     },
     {
       name: "LinkedIn",
       href: PERSONAL_INFO.linkedin,
       icon: LinkedinIcon,
       handle: "in/suvodeep-mishra",
+      colorClass: "text-[#0a66c2]",
     },
   ];
 
@@ -89,7 +92,7 @@ export function Contact() {
         </div>
       </div>
 
-      {/* Clean Text-Link Socials Row with External Arrows */}
+      {/* Clean Text-Link Socials Row with Official SVG Icons and External Arrows */}
       <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-zinc-600 mb-8 pt-1">
         {socials.map((social, idx) => {
           const Icon = social.icon;
@@ -101,7 +104,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 hover:text-zinc-900 transition-colors"
               >
-                <Icon size={14} className="text-zinc-700" />
+                <Icon size={14} className={social.colorClass} />
                 <span className="font-medium text-zinc-800">{social.name}</span>
                 <span className="text-zinc-400">({social.handle})</span>
                 <ArrowUpRightIcon size={11} className="text-zinc-400" />
