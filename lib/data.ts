@@ -21,7 +21,7 @@ export interface SkillCategory {
 export const PERSONAL_INFO = {
   name: "Suvodeep Mishra",
   aka: "suvodeep",
-  headline: "Systems Engineer & Full-Stack Developer",
+  headline: "Full-Stack Developer",
   subHeadline:
     "Focused on high-performance backends, native CLI tools, distributed systems, and modern web applications.",
   email: "suvodeepmishra01@gmail.com",
