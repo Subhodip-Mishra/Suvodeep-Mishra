@@ -52,7 +52,7 @@ function createHugeIcon(iconData: IconSvgElement) {
    Official Clean SVG Brand Icons (GitHub, X / Twitter, LinkedIn, Next.js)
    ========================================================================= */
 
-export function GithubIcon({ size = 16, className = "", ...props }: IconProps) {
+export function GithubIcon({ size = 18, className = "", ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ export function GithubIcon({ size = 16, className = "", ...props }: IconProps) {
   );
 }
 
-export function TwitterIcon({ size = 14, className = "", ...props }: IconProps) {
+export function TwitterIcon({ size = 17, className = "", ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -88,7 +88,7 @@ export function TwitterIcon({ size = 14, className = "", ...props }: IconProps) 
   );
 }
 
-export function LinkedinIcon({ size = 15, className = "", ...props }: IconProps) {
+export function LinkedinIcon({ size = 18, className = "", ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -104,7 +104,7 @@ export function LinkedinIcon({ size = 15, className = "", ...props }: IconProps)
   );
 }
 
-export function NextjsIcon({ size = 16, className = "", ...props }: IconProps) {
+export function NextjsIcon({ size = 18, className = "", ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 128 128"

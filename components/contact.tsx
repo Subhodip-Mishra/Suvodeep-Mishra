@@ -92,8 +92,8 @@ export function Contact() {
         </div>
       </div>
 
-      {/* Clean Text-Link Socials Row with Official SVG Icons and External Arrows */}
-      <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-zinc-600 mb-8 pt-1">
+      {/* Clean Text-Link Socials Row with Larger SVG Icons */}
+      <div className="flex flex-wrap items-center gap-4 text-xs sm:text-[13px] font-mono text-zinc-600 mb-8 pt-1">
         {socials.map((social, idx) => {
           const Icon = social.icon;
           return (
@@ -104,10 +104,10 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 hover:text-zinc-900 transition-colors"
               >
-                <Icon size={14} className={social.colorClass} />
+                <Icon size={18} className={social.colorClass} />
                 <span className="font-medium text-zinc-800">{social.name}</span>
                 <span className="text-zinc-400">({social.handle})</span>
-                <ArrowUpRightIcon size={11} className="text-zinc-400" />
+                <ArrowUpRightIcon size={13} className="text-zinc-400" />
               </a>
               {idx < socials.length - 1 && (
                 <span className="text-zinc-300 select-none">•</span>

@@ -82,7 +82,7 @@ export function Projects() {
                         : "bg-zinc-900 hover:bg-black text-white font-medium"
                     }`}
                   >
-                    <GithubIcon size={13} />
+                    <GithubIcon size={15} />
                     <span>GitHub</span>
                   </a>
                 )}
@@ -95,7 +95,7 @@ export function Projects() {
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-black text-white text-xs font-sans font-semibold transition-colors shadow-2xs active:scale-95"
                   >
                     <span>Live Demo</span>
-                    <ExternalLinkIcon size={12} />
+                    <ExternalLinkIcon size={13} />
                   </a>
                 )}
               </div>

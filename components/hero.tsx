@@ -40,17 +40,17 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Clean Header Social Links with Official Vector SVGs & External Arrows */}
-        <div className="flex items-center gap-3 text-xs font-mono">
+        {/* Clean Header Social Links with Larger Icons & External Arrows */}
+        <div className="flex items-center gap-4 text-xs sm:text-[13px] font-mono">
           <a
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
           >
-            <GithubIcon size={14} className="text-zinc-900" />
-            <span>GitHub</span>
-            <ArrowUpRightIcon size={11} className="text-zinc-400" />
+            <GithubIcon size={18} className="text-zinc-900" />
+            <span className="font-medium">GitHub</span>
+            <ArrowUpRightIcon size={13} className="text-zinc-400" />
           </a>
           <span className="text-zinc-300 select-none">•</span>
           <a
@@ -59,9 +59,9 @@ export function Hero() {
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
           >
-            <TwitterIcon size={13} className="text-black" />
-            <span>X</span>
-            <ArrowUpRightIcon size={11} className="text-zinc-400" />
+            <TwitterIcon size={17} className="text-black" />
+            <span className="font-medium">X</span>
+            <ArrowUpRightIcon size={13} className="text-zinc-400" />
           </a>
           <span className="text-zinc-300 select-none">•</span>
           <a
@@ -70,9 +70,9 @@ export function Hero() {
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
           >
-            <LinkedinIcon size={14} className="text-[#0a66c2]" />
-            <span>LinkedIn</span>
-            <ArrowUpRightIcon size={11} className="text-zinc-400" />
+            <LinkedinIcon size={18} className="text-[#0a66c2]" />
+            <span className="font-medium">LinkedIn</span>
+            <ArrowUpRightIcon size={13} className="text-zinc-400" />
           </a>
         </div>
       </div>
