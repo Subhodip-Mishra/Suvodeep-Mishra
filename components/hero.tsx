@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import {
   GithubIcon,
   TwitterIcon,
   LinkedinIcon,
-  ArrowUpRightIcon,
 } from "@/components/icons";
 import { PERSONAL_INFO } from "@/lib/data";
 
@@ -21,14 +21,22 @@ export function Hero() {
       {/* Top Header Row: Avatar, Name & Monogram, and Clean Social Links */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
         <div className="flex items-center gap-3">
-          {/* Avatar Squircle */}
-          <div className="relative w-10 h-10 rounded-xl bg-zinc-100 border border-zinc-200 flex items-center justify-center text-zinc-900 font-mono font-bold text-sm shadow-2xs select-none">
-            <span className="text-zinc-900 font-sans font-bold">SM</span>
-            <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white" />
+          {/* Rounded-full Profile Avatar */}
+          <div className="relative w-15 h-15 shrink-0 select-none">
+            <div className="w-full h-full rounded-full overflow-hidden border border-zinc-200 shadow-2xs bg-zinc-100">
+              <Image
+                src="/profile.jpg"
+                alt={PERSONAL_INFO.name}
+                width={50}
+                height={50}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
           </div>
 
           <div>
-            <h1 className="text-lg sm:text-xl font-bold tracking-tight text-zinc-900 flex items-center gap-1.5 font-sans">
+            <h1 className="text-lg sm:text-xl font-medium tracking-tight text-zinc-900 flex items-center gap-1.5 font-sans">
               <span>{PERSONAL_INFO.name}</span>
               <span className="text-zinc-400 font-normal italic text-sm sm:text-base">
                 aka {PERSONAL_INFO.aka}
@@ -46,39 +54,33 @@ export function Hero() {
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
+            className="flex items-center gap-1 text-zinc-700 hover:text-black transition-colors"
           >
-            <GithubIcon size={18} className="text-zinc-900" />
-            <span className="font-medium">GitHub</span>
-            <ArrowUpRightIcon size={13} className="text-zinc-400" />
+            <GithubIcon size={22} className="text-zinc-900" />
           </a>
           <span className="text-zinc-300 select-none">•</span>
           <a
             href={PERSONAL_INFO.x}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
+            className="flex items-center gap-1 text-zinc-700 hover:text-black transition-colors"
           >
-            <TwitterIcon size={17} className="text-black" />
-            <span className="font-medium">X</span>
-            <ArrowUpRightIcon size={13} className="text-zinc-400" />
+            <TwitterIcon size={22} className="text-black" />
           </a>
           <span className="text-zinc-300 select-none">•</span>
           <a
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-zinc-700 hover:text-black transition-colors"
+            className="flex items-center gap-1 text-zinc-700 hover:text-black transition-colors"
           >
-            <LinkedinIcon size={18} className="text-[#0a66c2]" />
-            <span className="font-medium">LinkedIn</span>
-            <ArrowUpRightIcon size={13} className="text-zinc-400" />
+            <LinkedinIcon size={25} className="text-[#0a66c2]" />
           </a>
         </div>
       </div>
 
       {/* Navigation Links */}
-      <nav className="flex items-center gap-3 text-xs font-mono text-zinc-500 border-b border-zinc-200 pb-3 mb-5">
+      <nav className="flex items-center gap-3 text-xs text-zinc-500 border-b border-zinc-200 pb-3 mb-5">
         {navItems.map((item, idx) => (
           <span key={item.label} className="flex items-center gap-3">
             <a
