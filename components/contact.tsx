@@ -23,16 +23,16 @@ export function Contact() {
 
   const socials = [
     {
-      name: "X (Twitter)",
-      href: PERSONAL_INFO.x,
-      icon: TwitterIcon,
-      handle: "@SuvodeepMishra",
-    },
-    {
       name: "GitHub",
       href: PERSONAL_INFO.github,
       icon: GithubIcon,
       handle: "@Subhodip-Mishra",
+    },
+    {
+      name: "X (Twitter)",
+      href: PERSONAL_INFO.x,
+      icon: TwitterIcon,
+      handle: "@SuvodeepMishra",
     },
     {
       name: "LinkedIn",
@@ -43,15 +43,15 @@ export function Contact() {
   ];
 
   return (
-    <footer id="contact" className="py-6 border-t border-zinc-200 pb-16">
+    <footer id="contact" className="py-8 border-t border-zinc-200 pb-16">
       {/* Section Sub-Header */}
-      <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-3.5">
+      <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-4">
         <span>Get in Touch</span>
         <span>Open for Inquiries</span>
       </div>
 
       {/* Clean Contact Card */}
-      <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 shadow-xs mb-6">
+      <div className="p-4 sm:p-5 rounded-2xl bg-zinc-50 border border-zinc-200 shadow-2xs mb-6">
         <h3 className="text-sm font-semibold text-zinc-900 mb-1">
           Let&apos;s build resilient systems together.
         </h3>
@@ -63,7 +63,7 @@ export function Contact() {
         <div className="flex flex-wrap items-center gap-2">
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-zinc-900 hover:bg-black text-white font-semibold text-xs transition-all active:scale-95 shadow-xs"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-zinc-900 hover:bg-black text-white font-semibold text-xs transition-colors shadow-2xs active:scale-95"
           >
             <SendIcon size={13} />
             <span>Send Email</span>
@@ -72,7 +72,7 @@ export function Contact() {
 
           <button
             onClick={copyEmail}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-800 border border-zinc-200 text-xs font-mono transition-all active:scale-95 shadow-xs"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-800 border border-zinc-200 text-xs font-mono transition-colors shadow-2xs active:scale-95"
           >
             {copied ? (
               <>
@@ -89,24 +89,27 @@ export function Contact() {
         </div>
       </div>
 
-      {/* Social Links Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-8">
-        {socials.map((social) => {
+      {/* Clean Text-Link Socials Row with External Arrows */}
+      <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-zinc-600 mb-8 pt-1">
+        {socials.map((social, idx) => {
           const Icon = social.icon;
           return (
-            <a
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-white hover:bg-zinc-50 border border-zinc-200 hover:border-zinc-300 shadow-xs transition-all flex items-center justify-between text-xs"
-            >
-              <div className="flex items-center gap-2">
-                <Icon size={14} className="text-zinc-600" />
-                <span className="text-zinc-800 font-medium">{social.name}</span>
-              </div>
-              <ArrowUpRightIcon size={12} className="text-zinc-400" />
-            </a>
+            <div key={social.name} className="flex items-center gap-4">
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:text-zinc-900 transition-colors"
+              >
+                <Icon size={14} className="text-zinc-700" />
+                <span className="font-medium text-zinc-800">{social.name}</span>
+                <span className="text-zinc-400">({social.handle})</span>
+                <ArrowUpRightIcon size={11} className="text-zinc-400" />
+              </a>
+              {idx < socials.length - 1 && (
+                <span className="text-zinc-300 select-none">•</span>
+              )}
+            </div>
           );
         })}
       </div>

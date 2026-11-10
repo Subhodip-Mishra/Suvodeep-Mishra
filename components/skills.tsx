@@ -4,20 +4,21 @@ import { SKILL_CATEGORIES } from "@/lib/data";
 
 export function Skills() {
   return (
-    <section id="skills" className="py-6 border-t border-zinc-200">
+    <section id="skills" className="py-8 border-t border-zinc-200">
       {/* Section Sub-Header */}
-      <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-3.5">
-        <span>Technical Stack</span>
+      <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-4">
+        <span>Technical Skills</span>
         <span>4 Domains</span>
       </div>
 
-      <div className="space-y-3">
+      {/* Compact Categorized Cards (py-3 px-4) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {SKILL_CATEGORIES.map((cat) => (
           <div
             key={cat.id}
-            className="p-3.5 rounded-xl border border-zinc-200 bg-white shadow-xs"
+            className="py-3 px-4 rounded-xl border border-zinc-200 bg-white shadow-2xs"
           >
-            <div className="flex items-center justify-between mb-1.5">
+            <div className="flex items-center justify-between mb-1">
               <h3 className="text-xs font-semibold text-zinc-900 font-sans">
                 {cat.title}
               </h3>
@@ -26,7 +27,7 @@ export function Skills() {
               </span>
             </div>
 
-            <p className="text-[11.5px] text-zinc-500 mb-3 leading-relaxed">
+            <p className="text-[11px] text-zinc-500 mb-2.5 leading-snug">
               {cat.description}
             </p>
 
@@ -34,9 +35,9 @@ export function Skills() {
               {cat.skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono ${
+                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10.5px] font-mono ${
                     skill.isCore
-                      ? "bg-zinc-100 text-zinc-900 border border-zinc-250 font-medium"
+                      ? "bg-zinc-100 text-zinc-900 border border-zinc-300 font-medium"
                       : "bg-zinc-50 text-zinc-600 border border-zinc-200"
                   }`}
                 >

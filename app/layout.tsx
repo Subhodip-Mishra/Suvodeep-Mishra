@@ -26,7 +26,10 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Suvodeep Mishra — Focused on high-performance backends, native CLI tools, distributed systems, and modern web applications.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
   },
   keywords: [
     "Suvodeep Mishra",
