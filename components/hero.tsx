@@ -22,13 +22,13 @@ export function Hero() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
         <div className="flex items-center gap-3">
           {/* Rounded-full Profile Avatar */}
-          <div className="relative w-15 h-15 shrink-0 select-none">
+          <div className="relative w-20 h-20 shrink-0 select-none">
             <div className="w-full h-full rounded-full overflow-hidden border border-zinc-200 shadow-2xs bg-zinc-100">
               <Image
                 src="/profile.jpg"
                 alt={PERSONAL_INFO.name}
-                width={50}
-                height={50}
+                width={80}
+                height={80}
                 className="w-full h-full object-cover"
                 priority
               />
@@ -36,13 +36,13 @@ export function Hero() {
           </div>
 
           <div>
-            <h1 className="text-lg sm:text-xl font-medium tracking-tight text-zinc-900 flex items-center gap-1.5 font-sans">
+            <h1 className="text-xl sm:text-2xl font-medium tracking-tight text-zinc-900 flex items-center gap-1.5 font-sans">
               <span>{PERSONAL_INFO.name}</span>
               <span className="text-zinc-400 font-normal italic text-sm sm:text-base">
                 aka {PERSONAL_INFO.aka}
               </span>
             </h1>
-            <p className="text-xs text-zinc-500 font-mono">
+            <p className="text-sm text-zinc-500">
               {PERSONAL_INFO.headline}
             </p>
           </div>
