@@ -88,6 +88,8 @@ export function TwitterIcon({ size = 17, className = "", ...props }: IconProps) 
   );
 }
 
+export const XIcon = TwitterIcon;
+
 export function LinkedinIcon({ size = 18, className = "", ...props }: IconProps) {
   return (
     <svg

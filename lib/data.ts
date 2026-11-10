@@ -4,6 +4,7 @@ export interface Project {
   domain: string;
   description: string;
   techStack: string[];
+  status: "Live Demo" | "Private Repo" | "Source Available on Request" | string;
   githubUrl?: string;
   liveUrl?: string;
 }
@@ -21,12 +22,12 @@ export interface SkillCategory {
 export const PERSONAL_INFO = {
   name: "Suvodeep Mishra",
   aka: "suvodeep",
-  headline: "Full-Stack Developer",
+  headline: "Systems Engineer & Full-Stack Developer",
   subHeadline:
-    "Focused on high-performance backends, native CLI tools, distributed systems, and modern web applications.",
+    "Full-Stack Web Developer with 3+ years of experience building modern React, TypeScript, and REST API applications across multiple projects.",
   email: "suvodeepmishra01@gmail.com",
   github: "https://github.com/Subhodip-Mishra",
-  linkedin: "https://linkedin.com/in/suvodeep-mishra",
+  linkedin: "https://www.linkedin.com/in/suvodeep-mishra-23313b2a0/",
   x: "https://x.com/SuvodeepMishra",
   location: "India • Remote Worldwide",
   availability: "Available for Systems & Full-Stack Roles",
@@ -38,54 +39,52 @@ export const PROJECTS: Project[] = [
     title: "Sandpro",
     domain: "AI Agent",
     description:
-      "AI tool-generation agent platform featuring isolated execution sandboxes, auto-healing execution scripts, and multi-provider auth.",
+      "AI tool-generation agent platform with isolated code execution sandboxes.",
     techStack: ["TypeScript", "Python", "Next.js", "Sandboxes"],
-    githubUrl: "https://github.com/Subhodip-Mishra/sandpro",
-    liveUrl: "https://sandpro.vercel.app",
+    status: "Private Repo",
   },
   {
     id: "cortex",
     title: "Cortex",
     domain: "Desktop",
     description:
-      "High-performance accounting desktop application with local HTTP/XML integrations to TallyPrime, structured reconciliation tables, and SHA-256 cache verification.",
+      "Accounting desktop application with local HTTP/XML integrations to TallyPrime.",
     techStack: ["Rust", "Tauri", "React", "SQLite"],
-    githubUrl: "https://github.com/Subhodip-Mishra/cortex",
+    status: "Private Repo",
   },
   {
     id: "dispatchhook",
     title: "Dispatchhook",
     domain: "Systems",
     description:
-      "Low-latency webhook delivery and traffic control platform with HMAC payload signing, Dockerized workers, and concurrency queues.",
-    techStack: ["C++", "epoll", "Docker", "Redis", "Express"],
-    githubUrl: "https://github.com/Subhodip-Mishra/dispatchhook",
+      "Low-latency webhook delivery and traffic control platform with HMAC payload signing.",
+    techStack: ["C++", "epoll", "Docker", "Redis"],
+    status: "Private Repo",
   },
   {
     id: "nextplan",
     title: "NextPlan",
     domain: "CLI Tool",
     description:
-      "Deterministic CLI task scheduling and execution engine built with fast JSON serialization.",
+      "Deterministic CLI task scheduling and execution engine.",
     techStack: ["Java", "Jackson", "CLI", "Linux"],
-    githubUrl: "https://github.com/Subhodip-Mishra/nextplan",
+    status: "Source Available on Request",
   },
   {
     id: "deephire-ai",
     title: "DeepHireAI",
-    domain: "Full-Stack",
+    domain: "AI Agent",
     description:
-      "AI-powered voice interview screening platform featuring recruiter job vaults and dynamic question chaining.",
-    techStack: ["Next.js", "AI Voice", "PostgreSQL", "Tailwind"],
-    githubUrl: "https://github.com/Subhodip-Mishra/deephire-ai",
-    liveUrl: "https://deephire-ai.vercel.app",
+      "AI-powered voice interview screening platform with dynamic role question chaining.",
+    techStack: ["Next.js", "Web Audio", "PostgreSQL"],
+    status: "Private Repo",
   },
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: "systems",
-    title: "Systems & Backends",
+    title: "Systems & Backend",
     description: "High-throughput engines, low-latency execution, and concurrency primitives.",
     skills: [
       { name: "C++", isCore: true },
@@ -111,7 +110,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     id: "databases",
-    title: "Databases & Storage",
+    title: "Databases & Cache",
     description: "Relational modeling, in-memory caching, vector search, and migrations.",
     skills: [
       { name: "PostgreSQL", isCore: true },
@@ -124,7 +123,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     id: "devops",
-    title: "DevOps & Core Tools",
+    title: "DevOps & Runtime",
     description: "Containerization, secure microVM sandboxes, and deterministic pipelines.",
     skills: [
       { name: "Linux", isCore: true },

@@ -1,14 +1,22 @@
-export type ProjectCategory = "Systems" | "Full-Stack" | "AI & Tools";
+export type ProjectCategory =
+  | "Systems"
+  | "Full-Stack"
+  | "AI & Tools"
+  | "AI Agent"
+  | "Desktop"
+  | "CLI Tool";
 
 export interface Project {
   id: string;
   title: string;
   description: string;
+  domain?: string;
+  category?: ProjectCategory;
   highlights?: string[];
   techStack: string[];
+  status?: string;
   githubUrl?: string;
   liveUrl?: string;
-  category: ProjectCategory;
   featured?: boolean;
   metrics?: string;
 }

@@ -40,7 +40,7 @@ export function Contact() {
       name: "LinkedIn",
       href: PERSONAL_INFO.linkedin,
       icon: LinkedinIcon,
-      handle: "in/suvodeep-mishra",
+      handle: "in/suvodeep-mishra-23313b2a0",
       colorClass: "text-[#0a66c2]",
     },
   ];

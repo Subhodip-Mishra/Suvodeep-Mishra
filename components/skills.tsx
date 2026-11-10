@@ -1,6 +1,7 @@
 "use client";
 
 import { SKILL_CATEGORIES } from "@/lib/data";
+import { Kbd } from "@/components/ui/kbd";
 
 export function Skills() {
   return (
@@ -8,44 +9,27 @@ export function Skills() {
       {/* Section Sub-Header */}
       <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-4">
         <span>Technical Skills</span>
-        <span>4 Domains</span>
+        <span>Stack Primitives</span>
       </div>
 
-      {/* Compact Categorized Cards (py-3 px-4) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {/* Row-based list with subtle horizontal divider lines between categories */}
+      <div className="divide-y divide-zinc-200/70 border-t border-b border-zinc-200/70">
         {SKILL_CATEGORIES.map((cat) => (
           <div
             key={cat.id}
-            className="py-3 px-4 rounded-xl border border-zinc-200 bg-white shadow-2xs"
+            className="py-2.5 sm:py-3 flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-4"
           >
-            <div className="flex items-center justify-between mb-1">
-              <h3 className="text-xs font-semibold text-zinc-900 font-sans">
-                {cat.title}
-              </h3>
-              <span className="text-[10px] font-mono text-zinc-400">
-                {cat.skills.length} tools
-              </span>
-            </div>
+            {/* Left side: fixed width ~170px with clean, muted category title */}
+            <span className="sm:w-[170px] shrink-0 text-xs sm:text-[13px] font-medium text-zinc-500 font-sans">
+              {cat.title}
+            </span>
 
-            <p className="text-[11px] text-zinc-500 mb-2.5 leading-snug">
-              {cat.description}
-            </p>
-
-            <div className="flex flex-wrap gap-1.5">
+            {/* Right side: Clean Shadcn Kbd badges */}
+            <div className="flex flex-wrap items-center gap-1.5 flex-1">
               {cat.skills.map((skill) => (
-                <span
-                  key={skill.name}
-                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10.5px] font-mono ${
-                    skill.isCore
-                      ? "bg-zinc-100 text-zinc-900 border border-zinc-300 font-medium"
-                      : "bg-zinc-50 text-zinc-600 border border-zinc-200"
-                  }`}
-                >
-                  {skill.isCore && (
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  )}
-                  <span>{skill.name}</span>
-                </span>
+                <Kbd key={skill.name}>
+                  {skill.name}
+                </Kbd>
               ))}
             </div>
           </div>
